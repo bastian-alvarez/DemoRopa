@@ -96,7 +96,7 @@ function sendWhatsApp() {
   const lines = items.map(({ product: p, quantity }) => `• ${p.name} — ${quantity} x ${money(p.price)} | Talla: ${p.size || 'a coordinar'} | Color: ${p.color || 'a coordinar'}`);
   const total = items.reduce((sum, x) => sum + x.product.price * x.quantity, 0);
   const note = $('#order-note').value.trim();
-  const text = `Hola, quiero consultar por este pedido de Sur Studio:\n\n${lines.join('\n')}\n\nSubtotal referencial: ${money(total)}${note ? `\n\nComentario: ${note}` : ''}\n\n¿Me confirman disponibilidad, pago y despacho?`;
+  const text = `Hola, quiero consultar por este pedido de BIMYO:\n\n${lines.join('\n')}\n\nSubtotal referencial: ${money(total)}${note ? `\n\nComentario: ${note}` : ''}\n\n¿Me confirman disponibilidad, pago y despacho?`;
   window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
 }
 
