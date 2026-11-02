@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2ec">
+  <meta name="description" content="Prendas seleccionadas para acompañar tu estilo. Explora la colección y coordina tu pedido por WhatsApp.">
+  <title>Sur Studio — ropa para todos los días</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">Despacho coordinado directamente contigo <span>✳</span> Compra fácil por WhatsApp</div>
+  <header class="site-header">
+    <a class="wordmark" href="#inicio" aria-label="Sur Studio, inicio">sur<span>studio</span><i>®</i></a>
+    <nav class="desktop-nav" aria-label="Principal"><a href="#tienda">Tienda</a><a href="#tienda" data-category-link="Mujer">Mujer</a><a href="#tienda" data-category-link="Hombre">Hombre</a><a href="#tienda" data-category-link="Niños">Niños</a></nav>
+    <div class="header-actions"><button class="text-button" id="admin-open">Admin</button><button class="cart-trigger" id="cart-open" aria-label="Abrir carrito">Bolsa <span id="cart-count">0</span></button></div>
+  </header>
+  <main id="inicio">
+    <section class="hero">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=90" alt="Amigas disfrutando una tarde de compras">
+      <div class="hero-shade"></div>
+      <div class="hero-copy"><p class="eyebrow light">VESTIRSE A TU MANERA</p><h1>Prendas que<br>se sienten <em>como tú.</em></h1><p>Una selección para tus días reales, tus planes espontáneos y todo lo que viene.</p><a class="button button-light" href="#tienda">Explorar colección <span>↗</span></a></div>
+      <div class="hero-note"><span>01 / 03</span><span>COLECCIÓN PARA TODOS LOS DÍAS</span></div>
+    </section>
+    <section class="intro section-wrap"><p class="eyebrow">ENCUENTRA TU PRÓXIMA FAVORITA</p><h2>Menos vueltas.<br><em>Más estilo propio.</em></h2><p class="intro-text">Descubre prendas seleccionadas por categoría, ocasión y estilo. Elige tus favoritas y coordinamos por WhatsApp.</p></section>
+    <section class="shop section-wrap" id="tienda">
+      <div class="shop-heading"><div><p class="eyebrow">LA SELECCIÓN</p><h2>Para llevar, <em>para vivir.</em></h2></div><span class="result-count" id="result-count"></span></div>
+      <div class="filter-area">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Busca una prenda..." aria-label="Buscar prendas"></label>
+        <div class="filters"><label><span>Categoría</span><select id="category-filter"><option value="">Todas</option><option>Mujer</option><option>Hombre</option><option>Niños</option></select></label><label><span>Tipo de prenda</span><select id="type-filter"><option value="">Todos</option></select></label><label><span>Estilo</span><select id="style-filter"><option value="">Todos</option><option>Casual</option><option>Urbano</option><option>Veraniego</option><option>Formal</option><option>Deportivo</option><option>Boho</option><option>Minimalista</option><option>Clásico</option></select></label><label><span>Color</span><select id="color-filter"><option value="">Todos</option></select></label><label><span>Ordenar</span><select id="sort-filter"><option value="featured">Destacados</option><option value="low">Menor precio</option><option value="high">Mayor precio</option><option value="new">Novedades</option></select></label></div>
+      </div>
+      <div class="active-filters" id="active-filters"></div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="empty-state"><span>✳</span><h3>No encontramos prendas</h3><p>Prueba otra palabra o limpia los filtros.</p><button class="text-button" id="clear-filters">Limpiar filtros ↗</button></div>
+    </section>
+    <section class="style-strip"><div class="style-strip-inner"><p class="eyebrow light">VISTE TU PROPIO RITMO</p><h2>Urbano, casual,<br><em>sol y mucho más.</em></h2><a href="#tienda" class="button button-outline">Encontrar mi estilo <span>↗</span></a><span class="strip-mark">S.</span></div></section>
+    <section class="how section-wrap"><div><p class="eyebrow">SENCILLO Y PERSONAL</p><h2>Tu compra,<br><em>a tu manera.</em></h2></div><div class="steps"><article><span>01</span><h3>Elige tus prendas</h3><p>Explora, filtra y arma tu bolsa con tranquilidad.</p></article><article><span>02</span><h3>Envíanos tu pedido</h3><p>Te llevamos a WhatsApp con el detalle listo para enviar.</p></article><article><span>03</span><h3>Coordinamos contigo</h3><p>Confirmamos disponibilidad, pago y despacho directamente.</p></article></div></section>
+  </main>
+  <footer><a class="wordmark" href="#inicio">sur<span>studio</span><i>®</i></a><p>Vestirse a tu manera, todos los días.</p><span>© 2026 Sur Studio</span></footer>
+  <div class="overlay hidden" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Tu bolsa" aria-hidden="true"><div class="drawer-head"><div><p class="eyebrow">TU SELECCIÓN</p><h2>Tu bolsa <span id="drawer-count">(0)</span></h2></div><button class="icon-button" id="cart-close" aria-label="Cerrar bolsa">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-bottom"><label for="order-note">Comentario para la tienda <span>(opcional)</span></label><textarea id="order-note" rows="3" maxlength="400" placeholder="Talla, color, consulta o detalle para coordinar..."></textarea><div class="cart-total"><span>Subtotal referencial</span><strong id="cart-total">$0</strong></div><p class="cart-disclaimer">El pedido se confirma por WhatsApp. El pago y el despacho se coordinan directamente con la tienda.</p><button class="button button-dark full" id="whatsapp-order">Continuar por WhatsApp <span>↗</span></button></div></aside>
+  <section class="admin-modal hidden" id="admin-modal" aria-label="Administración"><div class="admin-top"><a class="wordmark" href="#inicio">sur<span>studio</span><i>®</i></a><button class="icon-button" id="admin-close" aria-label="Cerrar administración">×</button></div><div id="admin-content"></div></section>
+</body>
+</html>
+
