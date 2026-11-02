@@ -27,7 +27,7 @@ jobs:
           cp -R public/. _site/
           cp data/products.seed.json _site/catalog.json
       - name: Configurar GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Subir sitio
         uses: actions/upload-pages-artifact@v4
         with:
@@ -41,5 +41,5 @@ jobs:
     steps:
       - name: Publicar sitio
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
