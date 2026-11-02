@@ -1,4 +1,4 @@
-# Sur Studio
+# BIMYO
 
 Tienda de ropa de muestra en Node.js. Incluye catálogo con búsqueda y filtros, bolsa de compra en el navegador, panel protegido para administrar prendas y preparación del pedido en WhatsApp. No cobra ni almacena datos de pago.
 
