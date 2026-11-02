@@ -5,3 +5,9 @@
 
 :root{--muted:#686b61}
 
+.wordmark{display:inline-flex;align-items:center;letter-spacing:normal;font-size:inherit;font-weight:inherit}
+.wordmark img{display:block;width:148px;height:auto}
+.site-header .wordmark img{width:158px}
+footer .wordmark img,.admin-top .wordmark img{width:138px}
+@media(max-width:600px){.site-header .wordmark img{width:132px}}
+
