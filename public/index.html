@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f2ec">
   <meta name="description" content="Prendas seleccionadas para acompañar tu estilo. Explora la colección y coordina tu pedido por WhatsApp.">
-  <title>Sur Studio — ropa para todos los días</title>
+  <title>BIMYO — ropa para todos los días</title>
+  <link rel="icon" type="image/svg+xml" href="./bimyo-logo.svg">
   <link rel="stylesheet" href="./styles.css">
   <script src="./app.js" defer></script>
 </head>
 <body>
   <div class="announcement">Despacho coordinado directamente contigo <span>✳</span> Compra fácil por WhatsApp</div>
   <header class="site-header">
-    <a class="wordmark" href="#inicio" aria-label="Sur Studio, inicio">sur<span>studio</span><i>®</i></a>
+    <a class="wordmark" href="#inicio" aria-label="BIMYO, inicio"><img src="./bimyo-logo.svg" alt="BIMYO"></a>
     <nav class="desktop-nav" aria-label="Principal"><a href="#tienda">Tienda</a><a href="#tienda" data-category-link="Mujer">Mujer</a><a href="#tienda" data-category-link="Hombre">Hombre</a><a href="#tienda" data-category-link="Niños">Niños</a></nav>
     <div class="header-actions"><button class="text-button" id="admin-open">Admin</button><button class="cart-trigger" id="cart-open" aria-label="Abrir carrito">Bolsa <span id="cart-count">0</span></button></div>
   </header>
@@ -37,10 +38,10 @@
     <section class="style-strip"><div class="style-strip-inner"><p class="eyebrow light">VISTE TU PROPIO RITMO</p><h2>Urbano, casual,<br><em>sol y mucho más.</em></h2><a href="#tienda" class="button button-outline">Encontrar mi estilo <span>↗</span></a><span class="strip-mark">S.</span></div></section>
     <section class="how section-wrap"><div><p class="eyebrow">SENCILLO Y PERSONAL</p><h2>Tu compra,<br><em>a tu manera.</em></h2></div><div class="steps"><article><span>01</span><h3>Elige tus prendas</h3><p>Explora, filtra y arma tu bolsa con tranquilidad.</p></article><article><span>02</span><h3>Envíanos tu pedido</h3><p>Te llevamos a WhatsApp con el detalle listo para enviar.</p></article><article><span>03</span><h3>Coordinamos contigo</h3><p>Confirmamos disponibilidad, pago y despacho directamente.</p></article></div></section>
   </main>
-  <footer><a class="wordmark" href="#inicio">sur<span>studio</span><i>®</i></a><p>Vestirse a tu manera, todos los días.</p><span>© 2026 Sur Studio</span></footer>
+  <footer><a class="wordmark" href="#inicio" aria-label="BIMYO, inicio"><img src="./bimyo-logo.svg" alt="BIMYO"></a><p>Vestirse a tu manera, todos los días.</p><span>© 2026 BIMYO</span></footer>
   <div class="overlay hidden" id="overlay"></div>
   <aside class="cart-drawer" id="cart-drawer" aria-label="Tu bolsa" aria-hidden="true"><div class="drawer-head"><div><p class="eyebrow">TU SELECCIÓN</p><h2>Tu bolsa <span id="drawer-count">(0)</span></h2></div><button class="icon-button" id="cart-close" aria-label="Cerrar bolsa">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-bottom"><label for="order-note">Comentario para la tienda <span>(opcional)</span></label><textarea id="order-note" rows="3" maxlength="400" placeholder="Talla, color, consulta o detalle para coordinar..."></textarea><div class="cart-total"><span>Subtotal referencial</span><strong id="cart-total">$0</strong></div><p class="cart-disclaimer">El pedido se confirma por WhatsApp. El pago y el despacho se coordinan directamente con la tienda.</p><button class="button button-dark full" id="whatsapp-order">Continuar por WhatsApp <span>↗</span></button></div></aside>
-  <section class="admin-modal hidden" id="admin-modal" aria-label="Administración"><div class="admin-top"><a class="wordmark" href="#inicio">sur<span>studio</span><i>®</i></a><button class="icon-button" id="admin-close" aria-label="Cerrar administración">×</button></div><div id="admin-content"></div></section>
+  <section class="admin-modal hidden" id="admin-modal" aria-label="Administración"><div class="admin-top"><a class="wordmark" href="#inicio" aria-label="BIMYO, inicio"><img src="./bimyo-logo.svg" alt="BIMYO"></a><button class="icon-button" id="admin-close" aria-label="Cerrar administración">×</button></div><div id="admin-content"></div></section>
 </body>
 </html>
 
